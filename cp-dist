@@ -1,0 +1,4 @@
+#!/usr/bin/sh zsh
+
+rm -rf /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/demo-web/src/dist
+cp -r /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/dist /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/demo-web/src/dist

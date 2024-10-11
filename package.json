@@ -1,11 +1,42 @@
 {
-  "name": "@xxhls/image2pixel",
-  "version": "0.0.1",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+	"name": "@xxhls/image-to-pixel",
+	"version": "0.0.1",
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"private": true,
+	"type": "module",
+	"files": ["dist"],
+	"main": "./dist/index.umd.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"import": "./dist/index.js",
+		"require": "./dist/index.umd.cjs"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build && zsh ./cp-dist",
+		"lint": "biome check --write .",
+		"commit": "cz",
+		"docs:dev": "vitepress dev docs",
+		"docs:build": "vitepress build docs",
+		"docs:preview": "vitepress preview docs"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.2",
+		"commitizen": "4.3.1",
+		"cz-conventional-changelog-zh-cn": "0.0.7",
+		"typescript": "5.6.2",
+		"vite": "5.4.8",
+		"vite-plugin-dts": "4.2.2",
+		"vitepress": "^1.3.4",
+		"vitest": "^2.1.1"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog-zh-cn"
+		}
+	}
 }

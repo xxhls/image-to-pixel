@@ -16,16 +16,14 @@
 		"require": "./dist/index.umd.cjs"
 	},
 	"scripts": {
-		"dev": "vite",
-		"build": "tsc && vite build && zsh ./cp-dist",
+		"build": "vite build && zsh ./cp-dist",
 		"lint": "biome check --write .",
 		"commit": "cz",
-		"docs:dev": "vitepress dev docs",
-		"docs:build": "vitepress build docs",
-		"docs:preview": "vitepress preview docs"
+		"dev:demo-web": "cd demo-web && npm run dev"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.2",
+		"@types/node": "^22.7.5",
 		"commitizen": "4.3.1",
 		"cz-conventional-changelog-zh-cn": "0.0.7",
 		"typescript": "5.6.2",
@@ -38,5 +36,8 @@
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog-zh-cn"
 		}
+	},
+	"dependencies": {
+		"canvas": "^2.11.2"
 	}
 }

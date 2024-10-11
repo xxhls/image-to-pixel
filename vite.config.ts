@@ -11,7 +11,7 @@ export default defineConfig({
 		lib: {
 			entry: "./lib/index.ts",
 			name: "index",
-			formats: ["es"],
+			formats: ["es", "cjs"],
 			fileName: "index",
 		},
 	},

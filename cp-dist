@@ -1,4 +1,8 @@
 #!/usr/bin/sh zsh
 
 rm -rf /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/demo-web/src/dist
+rm -rf /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/demo-node/src/dist
+rm -rf /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/demo-cli/dist
 cp -r /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/dist /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/demo-web/src/dist
+cp -r /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/dist /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/demo-node/src/dist
+cp -r /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/dist /Users/heyongqi10/Desktop/开源练习/工具库/image2pixel/@xxhls/image2pixel/demo-cli/dist

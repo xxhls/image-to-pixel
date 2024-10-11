@@ -1,19 +1,18 @@
+import type { Config } from ".";
 import { EMode } from "./enums";
 
 export class Handler {
 	private threshold = 128;
 	private mode: EMode = EMode.GRAY;
 
-	public transform(
-		imageData: ImageData,
-		config?: {
-			threshold?: number;
-			mode?: EMode;
-		},
-	) {
+	public transform(imageData: ImageData, config?: Config) {
 		if (config) {
-			this.threshold = config.threshold || this.threshold;
-			this.mode = config.mode || this.mode;
+			if (config?.threshold && config.threshold > 255 && config.threshold < 0) {
+				this.threshold = config.threshold || this.threshold;
+			}
+			if (config?.mode && (config.mode === 1 || config.mode === 0)) {
+				this.mode = config.mode || this.mode;
+			}
 		}
 		const data = imageData.data;
 		for (let i = 0; i < data.length; i += 4) {
